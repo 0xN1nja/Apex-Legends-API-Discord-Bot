@@ -8,12 +8,11 @@ import pytz
 from keep_alive import keep_alive
 client=discord.Client()
 API_KEY=r""
-IST=pytz.timezone('Asia/Kolkata')
 def utc_to_ist(dt_str):
     format="%Y-%m-%d %H:%M:%S"
     dt_utc=datetime.strptime(dt_str, format)
     dt_utc=dt_utc.replace(tzinfo=pytz.UTC)
-    local_zone=tz.tzlocal()
+    local_zone=tz.gettz("Asia/Kolkata") # For Replit
     dt_local=dt_utc.astimezone(local_zone)
     local_time_str=dt_local.strftime(format)
     return local_time_str
