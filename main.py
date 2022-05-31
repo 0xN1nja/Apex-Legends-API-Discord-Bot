@@ -14,7 +14,7 @@ def utc_to_ist(dt_str):
     dt_utc=dt_utc.replace(tzinfo=pytz.UTC)
     local_zone=tz.gettz("Asia/Kolkata") # For Replit
     dt_local=dt_utc.astimezone(local_zone)
-    local_time_str=dt_local.strftime(format)
+    local_time_str=dt_local.strftime(format+" "+"%p")
     return local_time_str
 def player_stats(name,platform):
     embed=discord.Embed(title="Player Stats")
