@@ -13,4 +13,4 @@ Pull Requests Are Welcome. For Major Changes, Please Open An Issue First To Disc
 Please Make Sure To Update Tests As Appropriate.
 
 ## License
-[MIT](https://github.com/0xN1nja/aiocv/blob/master/LICENCE.txt)
+[MIT](https://github.com/0xN1nja/Apex-Legends-API-Discord-Bot/blob/master/LICENCE.txt)
