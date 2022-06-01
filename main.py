@@ -163,9 +163,15 @@ async def on_message(message):
         await message.channel.send(embed=help_menu())
     if msg.startswith("-playerstats"):
         which_player=msg.replace("-playerstats","").strip().split()
-        __playername=which_player[0]
-        __platform=which_player[1]
-        await message.channel.send(embed=player_stats(__playername,__platform))
+        try:
+          __playername=which_player[0]
+          __platform=which_player[1]
+        except:
+          embed=discord.Embed(title="Missing Parameter(s)",description="You Didn't Enter `Playername~ Or `Platform` Correctly")
+          embed.add_field(name="For Example",value="-playerstats **0xN1nja PC**")
+          await message.channel.send(embed=embed)
+        else:
+          await message.channel.send(embed=player_stats(__playername,__platform))
     if msg.startswith("-maprotation"):
         which_mode=msg.replace("-maprotation","").strip()
         if which_mode=="br":
