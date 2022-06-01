@@ -167,10 +167,10 @@ async def on_message(message):
           __playername=which_player[0]
           __platform=which_player[1]
         except:
-          embed=discord.Embed(title="Missing Parameter(s)",description="You Didn't Enter `Playername~ Or `Platform` Correctly")
-          embed.add_field(name="For Example If You're Using PC",value="-playerstats **0xN1nja PC**")
-          embed.add_field(name="For XBOX",value="-playerstats **0xN1nja X1**")
-          embed.add_field(name="For Play Station",value="-playerstats **0xN1nja PS4**")
+          embed=discord.Embed(title="Missing Parameter(s)",description="You Didn't Enter `Playername` Or `Platform` Correctly")
+          embed.add_field(name="For Example If You're Using PC",value="-playerstats **0xN1nja PC**",inline=False)
+          embed.add_field(name="For XBOX",value="-playerstats **0xN1nja X1**",inline=False)
+          embed.add_field(name="For Play Station",value="-playerstats **0xN1nja PS4**",inline=False)
           await message.channel.send(embed=embed)
         else:
           await message.channel.send(embed=player_stats(__playername,__platform))
