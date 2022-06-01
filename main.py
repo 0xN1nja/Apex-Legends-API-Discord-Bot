@@ -67,7 +67,7 @@ def map_rotation_br():
     embed.set_image(url=parsed["current"]["asset"])
     embed.add_field(name="Start",value=utc_to_ist(parsed["current"]["readableDate_start"]),inline=False)
     embed.add_field(name="Till",value=utc_to_ist(parsed["current"]["readableDate_end"]),inline=False)
-    embed.add_field(name="Duration",value=str(parsed["next"]["DurationInMinutes"])+" "+"Minutes",inline=False)
+    embed.add_field(name="Duration",value=str(parsed["current"]["DurationInMinutes"])+" "+"Minutes",inline=False)
     embed.add_field(name="Remaining Minutes",value=parsed["current"]["remainingTimer"],inline=False)
     return embed
 def map_rotation_arenas():
@@ -78,7 +78,7 @@ def map_rotation_arenas():
     embed.set_image(url=parsed["current"]["asset"])
     embed.add_field(name="Start",value=utc_to_ist(parsed["current"]["readableDate_start"]),inline=False)
     embed.add_field(name="Till",value=utc_to_ist(parsed["current"]["readableDate_end"]),inline=False)
-    embed.add_field(name="Duration",value=str(parsed["next"]["DurationInMinutes"])+" "+"Minutes",inline=False)
+    embed.add_field(name="Duration",value=str(parsed["current"]["DurationInMinutes"])+" "+"Minutes",inline=False)
     embed.add_field(name="Remaining Minutes",value=parsed["current"]["remainingTimer"],inline=False)
     return embed
 def map_rotation_ranked_br():
@@ -89,7 +89,7 @@ def map_rotation_ranked_br():
     embed.set_image(url=parsed["current"]["asset"])
     embed.add_field(name="Start",value=utc_to_ist(parsed["current"]["readableDate_start"]),inline=False)
     embed.add_field(name="Till",value=utc_to_ist(parsed["current"]["readableDate_end"]),inline=False)
-    embed.add_field(name="Duration",value=str(parsed["next"]["DurationInMinutes"])+" "+"Minutes",inline=False)
+    embed.add_field(name="Duration",value=str(parsed["current"]["DurationInMinutes"])+" "+"Minutes",inline=False)
     embed.add_field(name="Remaining Minutes",value=parsed["current"]["remainingTimer"],inline=False)
     return embed
 def map_rotation_ranked_arenas():
@@ -100,7 +100,7 @@ def map_rotation_ranked_arenas():
     embed.set_image(url=parsed["current"]["asset"])
     embed.add_field(name="Start",value=utc_to_ist(parsed["current"]["readableDate_start"]),inline=False)
     embed.add_field(name="Till",value=utc_to_ist(parsed["current"]["readableDate_end"]),inline=False)
-    embed.add_field(name="Duration",value=str(parsed["next"]["DurationInMinutes"])+" "+"Minutes",inline=False)
+    embed.add_field(name="Duration",value=str(parsed["current"]["DurationInMinutes"])+" "+"Minutes",inline=False)
     embed.add_field(name="Remaining Minutes",value=parsed["current"]["remainingTimer"],inline=False)
     return embed
 def nextmap_br():
