@@ -23,7 +23,10 @@ def player_stats(name,platform):
     try:
         _global=parsed["global"]
     except:
-        embed=discord.Embed(title="Couldn't Find A Player With Provided Name/Platform")
+        embed=discord.Embed(title="Couldn't Find A Player With Provided Name/Platform",description="Check If Your **Origin** Username Is Correct Or Maybe The Platform You Entered Was Wrong. Enter A Platform Like This :")
+        embed.add_field(name="For PC",value="-playerstats **0xN1nja PC**",inline=False)
+        embed.add_field(name="For XBOX",value="-playerstats **0xN1nja X1**",inline=False)
+        embed.add_field(name="For Play Station",value="-playerstats **0xN1nja PS4**",inline=False)
         return embed
     else:
         # Main
