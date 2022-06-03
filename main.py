@@ -68,7 +68,7 @@ def map_rotation_br():
     embed.add_field(name="Start",value=utc_to_ist(parsed["current"]["readableDate_start"]),inline=False)
     embed.add_field(name="Till",value=utc_to_ist(parsed["current"]["readableDate_end"]),inline=False)
     embed.add_field(name="Duration",value=str(parsed["current"]["DurationInMinutes"])+" "+"Minutes",inline=False)
-    embed.add_field(name="Remaining Minutes",value=parsed["current"]["remainingTimer"],inline=False)
+    embed.add_field(name="Remaining Timer",value=parsed["current"]["remainingTimer"],inline=False)
     return embed
 def map_rotation_arenas():
     r=requests.get(f"https://api.mozambiquehe.re/maprotation?version=2&auth={API_KEY}").text
@@ -79,7 +79,7 @@ def map_rotation_arenas():
     embed.add_field(name="Start",value=utc_to_ist(parsed["current"]["readableDate_start"]),inline=False)
     embed.add_field(name="Till",value=utc_to_ist(parsed["current"]["readableDate_end"]),inline=False)
     embed.add_field(name="Duration",value=str(parsed["current"]["DurationInMinutes"])+" "+"Minutes",inline=False)
-    embed.add_field(name="Remaining Minutes",value=parsed["current"]["remainingTimer"],inline=False)
+    embed.add_field(name="Remaining Timer",value=parsed["current"]["remainingTimer"],inline=False)
     return embed
 def map_rotation_ranked_br():
     r=requests.get(f"https://api.mozambiquehe.re/maprotation?version=2&auth={API_KEY}").text
@@ -90,7 +90,7 @@ def map_rotation_ranked_br():
     embed.add_field(name="Start",value=utc_to_ist(parsed["current"]["readableDate_start"]),inline=False)
     embed.add_field(name="Till",value=utc_to_ist(parsed["current"]["readableDate_end"]),inline=False)
     embed.add_field(name="Duration",value=str(parsed["current"]["DurationInMinutes"])+" "+"Minutes",inline=False)
-    embed.add_field(name="Remaining Minutes",value=parsed["current"]["remainingTimer"],inline=False)
+    embed.add_field(name="Remaining Timer",value=parsed["current"]["remainingTimer"],inline=False)
     return embed
 def map_rotation_ranked_arenas():
     r=requests.get(f"https://api.mozambiquehe.re/maprotation?version=2&auth={API_KEY}").text
@@ -101,7 +101,7 @@ def map_rotation_ranked_arenas():
     embed.add_field(name="Start",value=utc_to_ist(parsed["current"]["readableDate_start"]),inline=False)
     embed.add_field(name="Till",value=utc_to_ist(parsed["current"]["readableDate_end"]),inline=False)
     embed.add_field(name="Duration",value=str(parsed["current"]["DurationInMinutes"])+" "+"Minutes",inline=False)
-    embed.add_field(name="Remaining Minutes",value=parsed["current"]["remainingTimer"],inline=False)
+    embed.add_field(name="Remaining Timer",value=parsed["current"]["remainingTimer"],inline=False)
     return embed
 def nextmap_br():
     r=requests.get(f"https://api.mozambiquehe.re/maprotation?version=2&auth={API_KEY}").text
