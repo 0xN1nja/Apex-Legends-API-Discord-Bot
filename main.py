@@ -47,7 +47,10 @@ def player_stats(name,platform):
         # Battle Pass
         embed.add_field(name="Battle Pass Level History",value=_global["battlepass"]["history"])
         # Badges
-        embed.add_field(name="Badges",value=[i for i in [i["name"] for i in _global["badges"]]],inline=False)
+        try:
+            embed.add_field(name="Badges",value=[i for i in [i["name"] for i in _global["badges"]]],inline=False)
+        except TypeError:
+            embed.add_field(name="Badges",value="None",inline=False)
         # Rank (Battle Royale)
         embed.add_field(name="Rank (Battle Royale)",value=_global["rank"]["rankName"])
         embed.add_field(name="RP",value=_global["rank"]["rankScore"])
